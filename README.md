@@ -54,3 +54,10 @@ sourcetype="hackdata" "repo.name"="CSCI-4830-002-2014/challenge-week-2" type="Pu
 ```
 sourcetype=hackdata | timechart count by type
 ```
+
+#Part 3
+```
+sourcetype=hack_events type=PushEvent | timechart count limit=30
+```
+Question: When did individuals push their changes?
+![image](part3_1.png?raw=true)
