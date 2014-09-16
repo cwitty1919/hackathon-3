@@ -29,3 +29,10 @@ Chris Wittenberg
 sourcetype="hackdata" | stats count(eval(type="PullRequestEvent")) as Count by payload.action
  ```
  ![image](2d.png?raw=true)
+
+ ## 2f
+ 
+ ```
+sourcetype="hackdata" "repo.name"="CSCI-4830-002-2014/challenge-week-2" type="PullRequestEvent" | timechart count
+ ```
+ ![image](2f.png?raw=true)
