@@ -3,7 +3,7 @@ Hackathon Week 3
 
 #Names
 
-Chris Wittenberg
+(Chris Wittenberg)[http://github.com/cwitty1919] (Ian Ker-Seymer)[http://github.com/ianks] 
 
 #Part1
 
