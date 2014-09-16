@@ -9,7 +9,7 @@ var github = new GitHubApi({
 });
 
 function getClassEventsForPage(i, callback){
-  github.repos.getFromOrg({
+  github.events.getFromOrg({
     org: "CSCI-4830-002-2014",
     per_page: 100,
     page: i
