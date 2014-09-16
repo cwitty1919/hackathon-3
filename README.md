@@ -21,3 +21,11 @@ Chris Wittenberg
  sourcetype=hackdata | timechart count by type
  ```
  ![image](2b.png?raw=true)
+
+
+## 2d
+ 
+ ```
+sourcetype="hackdata" | stats count(eval(type="PullRequestEvent")) as Count by payload.action
+ ```
+ ![image](2d.png?raw=true)
