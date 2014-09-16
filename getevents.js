@@ -27,4 +27,3 @@ async.map([1,2,3], getClassEventsForPage, function(err, results){
   flattened = flatten_fast(results);
   console.log(JSON.stringify(flattened, undefined, 4));
 });
-
