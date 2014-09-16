@@ -9,23 +9,22 @@ var github = new GitHubApi({
 });
 
 function getClassEventsForPage(i, callback){
-  github.repos.getForks({
-    user: "CSCI-4830-002-2014",
-    repo: "challenge-week-" + i
+  github.repos.getFromOrg({
+    org: "CSCI-4830-002-2014",
+    per_page: 100,
+    page: i
   }, callback);
 };
 
 // [ [a,a,a], [b,b,b], ... ] -> [a,a,a,b,b,b, ... ]
-function flatten_fast(input){	
-  // TODO: Use a faster implementation
-  // (ref: http://jsperf.com/flatten-an-array-loop-vs-reduce)
+function flatten_fast(input){
+  return input.reduce(function(a, b) {
+    return a.concat(b);
+  }, []);
 }
 
-async.map([/* TODO */], getClassEventsForPage, function(err, results){
-
-  // TODO: This must be implemented
-  flattened = flatten_fast(results);    
-
+async.map([1,2,3], getClassEventsForPage, function(err, results){
+  flattened = flatten_fast(results);
   console.log(JSON.stringify(flattened, undefined, 4));
 });
 

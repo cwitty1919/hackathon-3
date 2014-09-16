@@ -23,7 +23,7 @@ function flatten_slow(input){
 }
 
 async.map([1,2,3], getForksForChallengeWeek, function(err, results){
-  flattened = flatten_slow(results);    
+  flattened = flatten_slow(results);
   console.log(JSON.stringify(flattened, undefined, 4));
 });
 
