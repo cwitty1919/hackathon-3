@@ -1,18 +1,20 @@
-#Names 
+Hackathon Week 3
+================
 
-Chris Wittenberg		
+#Names
+
+Chris Wittenberg
 
 #Part1
 
-#Part 2
 
 ## 2a
 
- ```
- sourcetype="github_events" type="PullRequestEvent" | stats count by actor.login
- ```
+```
+sourcetype="github_events" type="PushEvent" | stats count by actor.login
+```
 
-![image](https://www.dropbox.com/s/fc9skwzrcg9lv9k/Screenshot%202014-09-15%2018.49.40.png?dl=1)
+![image](https://www.dropbox.com/s/pkg1m4e5x0djhes/Screenshot%202014-09-15%2019.09.32.png?dl=1)
 
 
 ## 2b
@@ -21,7 +23,6 @@ Chris Wittenberg
 sourcetype=hackdata | timechart count by type
 ```
 
-![image](2b.png?raw=true)
 
 ## 2c
 
@@ -29,18 +30,15 @@ sourcetype=hackdata | timechart count by type
 sourcetype=hack_events type=PullRequestEvent | stats count as Count by actor.login
 ```
 
-![image](2c.png?raw=true)
-
-## 2f
+## 2e
 
 ```
-sourcetype="github_events" type="PushEvent" | stats count by actor.login
+sourcetype="github_events" type="PullRequestEvent" | stats count by actor.login
 ```
 
-![image](https://www.dropbox.com/s/pkg1m4e5x0djhes/Screenshot%202014-09-15%2019.09.32.png?dl=1)
- 
- ```
- sourcetype=hackdata | timechart count by type
- ```
- ![image](2b.png?raw=true)
+![image](https://www.dropbox.com/s/fc9skwzrcg9lv9k/Screenshot%202014-09-15%2018.49.40.png?dl=1)
 
+
+```
+sourcetype=hackdata | timechart count by type
+```
