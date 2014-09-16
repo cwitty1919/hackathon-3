@@ -11,7 +11,6 @@ var github = new GitHubApi({
 function getClassEventsForPage(i, callback){
   github.events.getFromOrg({
     org: "CSCI-4830-002-2014",
-    per_page: 100,
     page: i
   }, callback);
 };
@@ -23,7 +22,7 @@ function flatten_fast(input){
   }, []);
 }
 
-async.map([1,2,3], getClassEventsForPage, function(err, results){
+async.map([1,2,3,4,5,6,7,8,9,10], getClassEventsForPage, function(err, results){
   flattened = flatten_fast(results);
   console.log(JSON.stringify(flattened, undefined, 4));
 });
